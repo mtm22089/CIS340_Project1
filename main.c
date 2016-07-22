@@ -32,16 +32,39 @@
  
  */
  
- #include <stdlib.h>
- #include <stdio.h>
- #include "node.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include "node.h"
  
- int main(void){
- 	struct mynode *list = (struct mynode *)malloc(sizeof(struct mynode));
+int main(void){
+	struct mynode *list = (struct mynode *)malloc(sizeof(struct mynode));
  	struct mynode *node = list;
  	
+ 	int current;
+	//Ask for keyboard input and insert into linked list
+	printf("Please enter integers to be used in the creation of a linked list.\n");
+	scanf("%d", &current);
+	addNode(current);
+
+	while (current !=0){
+
+		scanf("%d", &current):
+		if (current == 0){
+			 break;
+		}
+		addNode(current);
+	}
+	//print unsorted list
+	printf("The unsorted list is:\n");
+	printlist(head);
+	//sort and then print sorted list
+	printf("The sorted list is:\n");
+	quicksort(head);
+	printlist(head);
+
+  	//Do we need to free memory allocated by other functions here?
  
  
- return 0;
+  	return 0;
 } 	
  	
