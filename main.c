@@ -37,8 +37,6 @@
 #include "node.h"
  
 int main(void){
-	struct mynode *list = (struct mynode *)malloc(sizeof(struct mynode));
- 	struct mynode *node = list;
  	
  	int current;
 	//Ask for keyboard input and insert into linked list
