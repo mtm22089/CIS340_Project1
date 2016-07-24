@@ -95,16 +95,7 @@ void createPreviousLinks (struct mynode *){
 	}
 }	
 
-//print and free functions
-
-void printlist2(struct mynode *head){
-	struct mynode *node = head:
-	int i;
-	for (i = 1; node ->next != NULL; i++){
-		printf("%d " node ->value);
-		node = node->next;
-}
-
+//free functions
 void freelist(struct mynode *head){
 	struct mynode *temp, *node = head;
 	while (node){
