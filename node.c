@@ -71,3 +71,46 @@ while (current ->next != null){
 	}
 }
 	
+Rlist->value = switch;
+
+if (left != Llist) {
+	left -> next = Rlist;
+	Llist = quicksort(Llist->next);
+	createPreviousLinks(Llist); //go through method that makes doubly linked list
+		return Llist;
+	}else{
+	Rlist ->next = quicksort(Rlist ->next);
+	createPreviousLinks(Rlist);
+		return Rlist;
+	}
+}	
+
+
+void createPreviousLinks (struct mynode *){
+	struct mynode *previous =(struct mynode*)malloc(sizeof(struct mynode));
+	while (node ->next != NULL){
+		previous = node;
+		node = node->next;
+		node ->prev = previous;
+	}
+}	
+
+//print and free functions
+
+void printlist2(struct mynode *head){
+	struct mynode *node = head:
+	int i;
+	for (i = 1; node ->next != NULL; i++){
+		printf("%d " node ->value);
+		node = node->next;
+}
+
+void freelist(struct mynode *head){
+	struct mynode *temp, *node = head;
+	while (node){
+		temp = node;
+		node = node->next;
+		free(temp);
+	}
+	head = NULL;
+}
